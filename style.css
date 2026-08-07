@@ -1,17 +1,397 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#F8F9FA;
-    color:#1F2937;
-    line-height:1.6;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F8F9FA;
+    color: #1F2937;
+    line-height: 1.6;
 }
 
+
+
+:root {
+    --primary: #232F3E;
+    --secondary: #FF9900;
+    --light: #F8F9FA;
+    --white: #FFFFFF;
+    --dark: #1F2937;
+    --gray: #6B7280;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    --radius: 10px;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.navbar {
+    background: var(--primary);
+    color: var(--white);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h2 {
+    color: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary);
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 8%;
+
+    background:
+        linear-gradient(
+            rgba(35, 47, 62, 0.85),
+            rgba(35, 47, 62, 0.85)
+        ),
+        url("");
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #E5E7EB;
+    margin-bottom: 30px;
+}
+
+.hero button,
+.event-card button,
+form button {
+    background: var(--secondary);
+    color: var(--dark);
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: var(--radius);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero button:hover,
+.event-card button:hover,
+form button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow);
+
+    background: #e88a00;
+}
+
+
+/* =====================================
+   GENERAL SECTION STYLING
+===================================== */
+
+section {
+    padding: 80px 8%;
+}
+
+section > h2 {
+    text-align: center;
+
+    font-size: 2rem;
+
+    margin-bottom: 40px;
+
+    color: var(--primary);
+}
+
+
+/* =====================================
+   EVENTS
+===================================== */
+
+.event-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.event-card {
+    background: var(--white);
+
+    padding: 30px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.event-card h3 {
+    color: var(--primary);
+
+    font-size: 1.3rem;
+
+    margin-bottom: 20px;
+}
+
+.event-card p {
+    color: var(--gray);
+
+    margin-bottom: 10px;
+}
+
+.event-card i {
+    color: var(--secondary);
+
+    margin-right: 8px;
+}
+
+.event-card button {
+    margin-top: 15px;
+}
+
+
+/* =====================================
+   REGISTRATION FORM
+===================================== */
+
+#register {
+    background: #EEF1F5;
+}
+
+#register form {
+    background: var(--white);
+
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+#register input,
+#register select {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #D1D5DB;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    outline: none;
+}
+
+#register input:focus,
+#register select:focus {
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 153, 0, 0.15);
+}
+
+#register form button {
+    width: 100%;
+}
+
+
+/* =====================================
+   MY TICKETS
+===================================== */
+
+.ticket-placeholder {
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 50px;
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+.ticket-placeholder i {
+    color: var(--secondary);
+
+    margin-bottom: 20px;
+}
+
+.ticket-placeholder p {
+    color: var(--gray);
+
+    font-size: 1.1rem;
+}
+
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: var(--primary);
+
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 30px 8%;
+}
+
+footer p {
+    margin: 5px 0;
+
+    color: #D1D5DB;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+
+    .event-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+}
