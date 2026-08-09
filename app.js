@@ -2,6 +2,7 @@ const url = "https://exuberant-muskox-aud-11f63574.koyeb.app";
 
 const state = {
     events: [],
+    eventsLoaded: false,
 };
 
 const storageKey = "eventHubEmail";
@@ -50,7 +51,9 @@ function getEventId(event) {
 
 function formatDate(value) {
     if (!value) return "TBA";
-    return new Date(value).toLocaleDateString("en-US", {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return value;
+    return date.toLocaleDateString("en-US", {
         month: "long",
         day: "numeric",
         year: "numeric",
@@ -109,7 +112,7 @@ function renderEvents() {
     if (!state.events.length) {
         container.innerHTML = `
             <div class="event-card empty-state">
-                <p>Loading events from the API...</p>
+                <p>${state.eventsLoaded ? "No events available at this time." : "Loading events from the API..."}</p>
             </div>
         `;
         return;
@@ -147,7 +150,9 @@ async function loadEvents() {
         const events = await apiRequest("/events");
         if (Array.isArray(events)) {
             state.events = events;
-        } else if (events?.data) {
+        } else if (Array.isArray(events.events)) {
+            state.events = events.events;
+        } else if (Array.isArray(events.data)) {
             state.events = events.data;
         } else {
             state.events = [];
@@ -156,6 +161,8 @@ async function loadEvents() {
         console.error(error);
         showMessage("Unable to load events from the API.", "error");
         state.events = [];
+    } finally {
+        state.eventsLoaded = true;
     }
     renderEvents();
 }
@@ -203,10 +210,14 @@ async function loadRegistrations() {
         const registrations = await apiRequest(`/registrations/${encodeURIComponent(email)}`);
         if (Array.isArray(registrations)) {
             renderTickets(registrations);
-        } else if (registrations?.data) {
+        } else if (Array.isArray(registrations.registrations)) {
+            renderTickets(registrations.registrations);
+        } else if (Array.isArray(registrations.data)) {
             renderTickets(registrations.data);
-        } else {
+        } else if (registrations) {
             renderTickets([registrations]);
+        } else {
+            renderTickets([]);
         }
     } catch (error) {
         console.error(error);

@@ -43,7 +43,13 @@ async function loadAdminEvents() {
     eventListContainer.textContent = "Loading events...";
     try {
         const events = await apiRequest("/events");
-        const list = Array.isArray(events) ? events : events.data || [];
+        const list = Array.isArray(events)
+            ? events
+            : Array.isArray(events.events)
+            ? events.events
+            : Array.isArray(events.data)
+            ? events.data
+            : [];
         if (!list.length) {
             eventListContainer.innerHTML = "<p>No events found.</p>";
             return;
