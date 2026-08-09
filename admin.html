@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h2>EventHub Admin</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Back to Home</a></li>
+        </ul>
+    </nav>
+
+    <section class="admin-panel">
+        <div class="admin-card admin-login-card" id="admin-login-card">
+            <h2>Admin Login</h2>
+            <p class="admin-info">Use the dummy credentials below to access the admin dashboard.</p>
+            <p class="admin-info"><strong>Username:</strong> admin@example.com</p>
+            <p class="admin-info"><strong>Password:</strong> admin123</p>
+            <form id="admin-login-form" class="admin-form">
+                <input id="admin-username" type="email" placeholder="Admin Email" required>
+                <input id="admin-password" type="password" placeholder="Admin Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="message" id="admin-login-message"></div>
+        </div>
+
+        <div id="admin-dashboard" class="admin-card" style="display:none;">
+            <div class="admin-dashboard-header">
+                <h2>Event Management</h2>
+                <button id="admin-logout" class="secondary-button">Logout</button>
+            </div>
+            <div class="admin-card admin-form-card">
+                <h3>Create New Event</h3>
+                <form id="admin-event-form" class="admin-form">
+                    <input id="event-name" type="text" placeholder="Event Name" required>
+                    <input id="event-date" type="date" required>
+                    <input id="event-time" type="text" placeholder="Event Time" required>
+                    <input id="event-location" type="text" placeholder="Location" required>
+                    <textarea id="event-description" rows="4" placeholder="Description" required></textarea>
+                    <input id="event-image" type="url" placeholder="Image URL (optional)">
+                    <button type="submit">Create Event</button>
+                </form>
+                <div class="message" id="admin-dashboard-message"></div>
+            </div>
+
+            <div class="admin-card">
+                <h3>Existing Events</h3>
+                <div id="admin-event-list">Loading events...</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="admin.js"></script>
+</body>
+</html>

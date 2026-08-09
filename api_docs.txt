@@ -1,0 +1,116 @@
+GET
+/events
+Get Events
+
+POST
+/events
+Create Event
+
+Parameters
+Try it out
+No parameters
+
+Request body
+
+application/json
+Example Value
+Schema
+{
+  "name": "string",
+  "date": "string",
+  "time": "string",
+  "location": "string",
+  "description": "string",
+  "image_url": "string"
+}
+
+
+GET
+/events/{event_id}
+Get Event
+
+Parameters
+Try it out
+Name	Description
+event_id *
+string
+(path)
+
+
+DELETE
+/events/{event_id}
+Delete Event
+
+Parameters
+Try it out
+Name	Description
+event_id *
+string
+
+
+GET
+/registrations
+Get All Registrations
+
+POST
+/register
+Register
+
+Parameters
+Try it out
+No parameters
+
+Request body
+
+application/json
+Example Value
+Schema
+{
+  "event_id": "string",
+  "name": "string",
+  "email": "user@example.com",
+  "phone": "string",
+  "registration_date": "2026-08-09"
+}
+
+GET
+/registrations/{email}
+Get Registrations
+
+Parameters
+Try it out
+Name	Description
+email *
+string
+(path)
+email
+
+
+GET
+/registration/{id}
+Get Registration
+
+Parameters
+Try it out
+Name	Description
+id *
+string
+(path)
+
+
+DELETE
+/registration/{id}
+Delete Registration
+
+Parameters
+Try it out
+Name	Description
+id *
+string
+(path)
+id
+
+
+ Admin Dashboard Credentials
+Username: admin@example.com
+Password: admin123

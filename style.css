@@ -345,6 +345,202 @@ footer p {
    RESPONSIVE DESIGN
 ===================================== */
 
+
+.email-banner {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 24px 28px;
+    background: #FEF3C7;
+    border: 1px solid #FCD34D;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: #92400E;
+}
+
+.email-banner .banner-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.email-banner .banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.email-banner input {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    border: 1px solid #D1D5DB;
+    font-family: inherit;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 26px;
+    background: var(--secondary);
+    color: var(--dark);
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.hero-button:hover {
+    background: #e88a00;
+}
+
+.ticket-container {
+    display: grid;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.ticket-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.ticket-card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.ticket-card p {
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+.small-note {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+
+.about-card {
+    max-width: 900px;
+    margin: auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.message {
+    max-width: 1200px;
+    margin: 22px auto;
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    font-weight: 500;
+    display: none;
+}
+
+.message.success {
+    display: block;
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.message.error {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.secondary-button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background: #1a2633;
+}
+
+.admin-panel {
+    padding: 80px 8%;
+}
+
+.admin-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.admin-login-card {
+    max-width: 700px;
+    margin: auto;
+}
+
+.admin-form {
+    display: grid;
+    gap: 18px;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form button {
+    width: 100%;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+    border: 1px solid #E5E7EB;
+    padding: 14px;
+    text-align: left;
+}
+
+.admin-table th {
+    background: #F3F4F6;
+    color: var(--primary);
+}
+
+.admin-table td button {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.admin-table td button:hover {
+    background: #dc2626;
+}
+
+.admin-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-info {
+    color: var(--gray);
+}
+
 @media (max-width: 900px) {
 
     .event-container {
