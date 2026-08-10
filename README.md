@@ -3,7 +3,7 @@
 
 <p align="center">
 
-<strong>A cloud-based event registration and ticketing platformbuilt with FastAPI, AWS DynamoDB, Docker and GitHubActions.</strong>
+<strong>A cloud-based event registration and ticketing platform built with FastAPI, AWS DynamoDB, Docker and GitHub Actions.</strong>
 
 </p>
 
@@ -17,7 +17,7 @@
 
 #### 📌 About the Project
 
-EventHub is an event registration and ticketing system developed asa cloud-computing capstone project.
+EventHub is an event registration and ticketing system developed as a cloud-computing capstone project.
 
 The application allows users to:
 
@@ -29,7 +29,7 @@ The application allows users to:
 
 ❌ Cancel registrations
 
-The project demonstrates how a frontend application can communicate witha REST API, how a Python backend can interact with AWS DynamoDB usingboto3, and how Docker and GitHub Actions can support application development and deployment.
+The project demonstrates how a frontend application can communicate witha REST API, how a Python backend can interact with AWS DynamoDB using boto3, and how Docker and GitHub Actions can support application development and deployment.
 
 #### 🎯 Problem Statement
 
@@ -47,7 +47,7 @@ Deploy and update the application consistently
 
 #### 💡 Our Solution
 
-EventHub provides a web-based system where the frontend communicateswith a FastAPI backend, while registration and event information isstored in Amazon DynamoDB.
+EventHub provides a web-based system where the frontend communicates with a FastAPI backend, while registration and event information is stored in Amazon DynamoDB.
 
 #### 🏗️ Architecture
 
