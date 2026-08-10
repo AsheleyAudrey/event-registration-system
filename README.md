@@ -29,11 +29,11 @@ The application allows users to:
 
 ❌ Cancel registrations
 
-The project demonstrates how a frontend application can communicate witha REST API, how a Python backend can interact with AWS DynamoDB usingboto3, and how Docker and GitHub Actions can support applicationdevelopment and deployment.
+The project demonstrates how a frontend application can communicate witha REST API, how a Python backend can interact with AWS DynamoDB usingboto3, and how Docker and GitHub Actions can support application development and deployment.
 
 #### 🎯 Problem Statement
 
-Traditional event registration can rely on manual forms andspreadsheets. This can make it difficult to:
+Traditional event registration can rely on manual forms and spreadsheets. This can make it difficult to:
 
 Keep registration information organized
 
@@ -211,7 +211,7 @@ dynamodb = boto3.resource(
 
 #### 🔐 AWS IAM
 
-AWS IAM was used to manage access to AWS resources required by theapplication.
+AWS IAM was used to manage access to AWS resources required by the application.
 
 The backend requires appropriate permissions to interact with DynamoDB.
 
@@ -341,50 +341,29 @@ The following screenshots can be used to demonstrate that the project is working
 
 🌐 Frontend
 
-Show:
+![alt text](AdobeExpressPhotos_a8c2bf2bbc99442d8206b2330c2e85a2_CopyEdited.png)
 
-EventHub homepage
-
-Event cards
-
-Registration form
-
-My Tickets section
+![alt text](AdobeExpressPhotos_7a56250d5154494ca75cd8403693c7fa_CopyEdited.png)
 
 ⚙️ FastAPI
 
-Show:
+![alt text](AdobeExpressPhotos_a2b4e567fbfa4681a8c565054da11bf7_CopyEdited.png)
 
-Koyeb deployment
+![alt text](AdobeExpressPhotos_0aac3101dda94227bfb78999ed34c555_CopyEdited.png)
 
-/docs
+![alt text](AdobeExpressPhotos_6cadac2a679c4b7382e7b61ef7e5986b_CopyEdited.png)
 
-Available API endpoints
 
-🗄️ DynamoDB
-
-Show:
-
-Events data
-
-Registrations data
 
 🎟️ Registration
 
-Show:
+![alt text](AdobeExpressPhotos_f697f08b3a734f6d8193c25f109e4369_CopyEdited.png)
 
-Registration submitted from the frontend
-
-Registration record appearing in DynamoDB
 
 
 ⚙️ GitHub Actions
 
-Show:
-
-Successful workflow run
-
-Docker-related workflow steps
+![alt text](AdobeExpressPhotos_18e63efbbda14a91bab3cbed0f48b7a0_CopyEdited.png)
 
 #### 📂 Project Structure
 
