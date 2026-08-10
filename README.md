@@ -182,7 +182,7 @@ Method   Endpoint                   Purpose
 
 FastAPI provides interactive API documentation through:
 
-/docs
+[/docs](https://exuberant-muskox-aud-11f63574.koyeb.app/docs)
 
 This makes it possible to test the API endpoints directly from thebrowser.
 
@@ -277,7 +277,7 @@ A successful workflow run was tested through the GitHub Actions interface.
      ├── 🐳 Docker workflow
      └── ✅ Automated process
 
-This reduces the need to manually repeat the same build/deployment stepsafter every change.
+This reduces the need to manually repeat the same build/deployment steps after every change.
 
 #### ☁️ Deployment
 
@@ -399,17 +399,17 @@ cd event-registration-system
 
 2️⃣ Install Backend Dependencies
 
-Create a virtual environment and install the required Python packagesaccording to the project's dependency file.
+Create a virtual environment and install the required Python packages according to the project's dependency file.
 
 3️⃣ Run with Docker
 
-Build and run the application using the Docker configuration included inthe repository.
+Build and run the application using the Docker configuration included in the repository.
 
 For example:
 
 docker compose up --build
 
-Use the exact Docker Compose command/configuration currently includedin the repository.
+Use the exact Docker Compose command/configuration currently included in the repository.
 
 4️⃣ Open the Application
 
