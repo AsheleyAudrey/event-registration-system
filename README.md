@@ -15,7 +15,7 @@
   💻 <a href="https://github.com/AsheleyAudrey/event-registration-system">GitHub Repository</a>
 </p>
 
-📌 About the Project
+#### 📌 About the Project
 
 EventHub is an event registration and ticketing system developed asa cloud-computing capstone project.
 
@@ -31,7 +31,7 @@ The application allows users to:
 
 The project demonstrates how a frontend application can communicate witha REST API, how a Python backend can interact with AWS DynamoDB usingboto3, and how Docker and GitHub Actions can support applicationdevelopment and deployment.
 
-🎯 Problem Statement
+#### 🎯 Problem Statement
 
 Traditional event registration can rely on manual forms andspreadsheets. This can make it difficult to:
 
@@ -45,11 +45,11 @@ Connect the user interface to a central database
 
 Deploy and update the application consistently
 
-💡 Our Solution
+#### 💡 Our Solution
 
 EventHub provides a web-based system where the frontend communicateswith a FastAPI backend, while registration and event information isstored in Amazon DynamoDB.
 
-🏗️ Architecture
+#### 🏗️ Architecture
 
 
 
@@ -99,7 +99,7 @@ EventHub provides a web-based system where the frontend communicateswith a FastA
                   │ 🚀 CI/CD workflow│
                   └──────────────────┘
 
-🧠 How the Architecture Works
+#### 🧠 How the Architecture Works
 
 👤 The user opens the EventHub frontend.
 
@@ -119,13 +119,13 @@ EventHub provides a web-based system where the frontend communicateswith a FastA
 
 ⚙️ GitHub Actions automates the configured CI/CD workflow.
 
-✨ Features
+#### ✨ Features
 
 Feature                   Description
 
 📅 Event Listing          View available events➕ Event Creation         Create an event through the API🔎 Event Lookup           Retrieve a specific event🎟️ Registration           Register for an event👤 Registration Lookup    Find registrations using an email address🔎 Registration Details   Retrieve an individual registration❌ Cancellation           Delete/cancel a registration📱 Responsive UI          Frontend designed for different screen sizes📖 API Documentation      FastAPI Swagger documentation🐳 Containerization       Docker-based application environment⚙️ CI/CD                  GitHub Actions workflow☁️ Cloud Database         Amazon DynamoDB
 
-🛠️ Technology Stack
+#### 🛠️ Technology Stack
 
 🎨 Frontend
 
@@ -163,7 +163,7 @@ GitHub
 
 GitHub Actions
 
-🔌 API Endpoints
+#### 🔌 API Endpoints
 
 Method   Endpoint                   Purpose
 
@@ -178,7 +178,7 @@ Method   Endpoint                   Purpose
 `GET`    `/registration/{id}`       Get one registration
 `DELETE`  `/registration/{id}`       Cancel a registration
 
-📖 Interactive API Documentation
+#### 📖 Interactive API Documentation
 
 FastAPI provides interactive API documentation through:
 
@@ -209,13 +209,13 @@ dynamodb = boto3.resource(
     region_name="us-east-1"
 )
 
-🔐 AWS IAM
+#### 🔐 AWS IAM
 
 AWS IAM was used to manage access to AWS resources required by theapplication.
 
 The backend requires appropriate permissions to interact with DynamoDB.
 
-🔒 Security Rule
+#### 🔒 Security Rule
 
 AWS credentials was never be committed to GitHub.
 
@@ -237,7 +237,7 @@ Docker helps package the application together with its required dependencies and
 
 This makes the application environment more consistent between development and deployment.
 
-Docker workflow
+#### Docker workflow
 
 Application Code
       │
@@ -279,7 +279,7 @@ A successful workflow run was tested through the GitHub Actions interface.
 
 This reduces the need to manually repeat the same build/deployment stepsafter every change.
 
-☁️ Deployment
+#### ☁️ Deployment
 
 🌐 Frontend
 
@@ -335,7 +335,7 @@ Response
    ↓
 Frontend
 
-📸 Project Evidence
+#### 📸 Project Evidence
 
 The following screenshots can be used to demonstrate that the project is working:
 
@@ -386,7 +386,7 @@ Successful workflow run
 
 Docker-related workflow steps
 
-📂 Project Structure
+#### 📂 Project Structure
 
 event-registration-system/
 │
@@ -410,7 +410,7 @@ event-registration-system/
 └── 📄 Docker configuration files
 
 
-🚀 Running the Project
+#### 🚀 Running the Project
 
 1️⃣ Clone the Repository
 
@@ -438,7 +438,7 @@ Open the frontend locally or use the deployed application:
 
 https://asheleyaudrey.github.io/event-registration-system/
 
-🔗 Project Links
+#### 🔗 Project Links
 
 🎟️ Resource                            Link
 
@@ -449,7 +449,7 @@ https://asheleyaudrey.github.io/event-registration-system/
 ⚙️ API Documentation                https://exuberant-muskox-aud-11f63574.koyeb.app/docs
 
 
-👩🏽‍💻 Author
+#### 👩🏽‍💻 Author
 
 Audrey Asheley Amarh
 
